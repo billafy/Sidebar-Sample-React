@@ -1,0 +1,100 @@
+body
+{
+	font-family: 'Segoe UI';
+	margin: 0;
+	padding: 0px;
+	background-color: rgba(239,239,239);
+}
+button
+{
+	outline: none;
+	border: 0px;
+}
+ul
+{
+	list-style-type: none;
+}
+.sidebar-btn button
+{
+	margin: 20px;
+	font-size: 2rem;
+	color: steelblue;
+	animation: grow 1s infinite;
+}
+@keyframes grow
+{
+	0% {transform: scale(1);}
+	50% {transform: scale(1.5)}
+	100% {transform: scale(1)}
+}
+
+.sidebar-full
+{
+	display: grid;
+	grid-template-rows: 1fr 5fr 1fr;
+	background-color: white;
+	width: 20%;
+	/*transition : animation 1s linear;
+	animation: slideIn 0.3s;*/
+}
+.title
+{
+	text-align: center;
+}
+.title h1
+{
+	display: inline-block;
+	margin-right: 20px;
+}
+.title button
+{
+	font-size: 1.5rem;
+	color: red;
+	background-color: white;
+}
+.title button:hover
+{
+	color: black;
+}
+.site-links li
+{
+	margin-bottom: 20px;
+	font-size: 1.2rem;
+}
+.site-links li:hover
+{
+	border-left: 3px solid skyblue;
+	padding-left: 10px;
+	cursor: pointer;
+}
+.social-links ul
+{
+	display: flex;
+}
+.social-links li
+{
+	margin-right: 10px;
+}
+.social-links a:hover
+{
+	color: black !important;
+}
+@keyframes slideIn
+{
+	0% {transform: translate(-100px);}
+	100% {transform: translate(0px);}
+}
+@media (min-width: 620px) and (max-width: 1040px)
+{
+	.sidebar-full
+	{
+		width: 50%;
+	}
+}
+@media (min-width: 0px) and (max-width: 620px)
+{
+	.sidebar-full
+	{
+		width: 100%;
+	}
+}
